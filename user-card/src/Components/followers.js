@@ -1,9 +1,10 @@
 import React from 'react';
+import Card from './card'
 
 const Followers = (props) => {
     console.log(props)
     return(<>
-        {props.followers.map(i => <div key={i.login}>{i.login}</div>)}
+        {props.followers.map(i => <Card key={i.login} {...i} />)}
          </>
         )
 }

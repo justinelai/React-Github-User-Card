@@ -4,6 +4,7 @@
 font-family: 'Nova Cut', cursive; */
 
 body {
+  background: #fff9ef;
   margin: 0;
   font-family: 'Rubik', "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -15,4 +16,18 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  color: #011638;
+  font-family: 'Nova Cut', cursive;
+}
+
+p {
+  color: #364156
+}
+
+a {
+  color: #214E34;
+  text-decoration: underline
 }
