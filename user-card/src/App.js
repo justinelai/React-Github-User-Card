@@ -15,14 +15,21 @@ class App extends React.Component {
   }
 
   fetchUser = () => {
-    fetch("https://api.github.com/users/justinelai")
-    .then(res => res.json())
-    .then(res => {
-      console.log("Fetching user", res)
-      this.setState({ userData: res })
-    })
-    .catch(err => console.log(err))
+    const urls = [
+      'https://api.github.com/users/justinelai',
+      'https://api.github.com/users/justinelai/followers'
+    ]
+    Promise.all(urls.map(url => fetch(url)
+        .then(res => res.json())
+        .catch(err => console.error('Request failed', err))
+    ))
+    .then(data => this.setState({
+      userData: data[0],
+      followers: data[1]
+    }))
+    
   }
+
 
   render() {
     return (
