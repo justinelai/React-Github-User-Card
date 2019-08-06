@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Followers from './Components/followers'
 
 class App extends React.Component {
   constructor() {
@@ -34,7 +35,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-      <p>{this.state.userData.login}</p>
+      <p>{this.state.userData.login} has {this.state.userData.followers} followers!</p>
+      <Followers followers={this.state.followers}/>
       </div>
     );
   }
